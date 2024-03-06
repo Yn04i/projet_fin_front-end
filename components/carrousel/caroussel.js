@@ -29,20 +29,27 @@ export default function Caroussel() {
                     <CarouselContent>
                         {dataCarousel.map((item) => (
                             <CarouselItem key={item.id} className="flex justify-center items-center flex-col h-full">
-                                <div className="relative w-60 h-70 flex justify-center items-center flex-col" >
-                                    <img
-                                        src={item?.image}
-                                        alt={item?.name}
-                                        className="w-60 h-60 absolute "
-                                    />
-                                    <h1 className="text-white text-[350px]">{item?.pokedexId}</h1>
+                                <div className="flex justify-center items-center flex-col" >
+                                    <div className="flex flex-col justify-center items-center">
+                                        <p className="text-white text-2xl pt-5">{item?.name}</p>
+                                        <p className="flex">{item.apiTypes.map((item, index) => <img key={index} className="w-5" src={item.image}></img>)}</p>
+                                    </div>
+                                    <div className="relative flex justify-center items-center">
+                                        <div className="flex flex-col justify-center items-center absolute ">
+                                            <img
+                                                src={item?.image}
+                                                alt={item?.name}
+                                                className="h-60 w-60 "
+                                            />
+                                        </div>
+                                        <h1 className="text-white text-[300px]">{item?.pokedexId}</h1>
+                                    </div>
                                 </div>
-                                <p className="text-white text-2xl">{item?.name}</p>
                             </CarouselItem>
                         ))}
                     </CarouselContent>
-                    <CarouselPrevious className="rounded-none h-full" />
-                    <CarouselNext className="rounded-none h-full" />
+                    <CarouselPrevious className="" />
+                    <CarouselNext className="" />
                 </Carousel>}
         </div>
     )

@@ -9,7 +9,7 @@ export default function Navbarre() {
     const Connexion = useAppSelector((state) => state.login.statusConnnexion);
     const userName = useAppSelector((state) => state.login.userName);
     return (
-        <div className='w-full sticky top-0 bg-white border-b-2 border-black flex justify-between items-center px-6'>
+        <div className='w-full sticky top-0 bg-white border-b-2 border-black flex justify-between items-center px-6 z-50'>
             <div className=' flex justify-center'>
                 <Link href='/' className='flex flex-col items-center'>
                     <Image className="" src={title} alt="title" width={100} height={100}></Image>
