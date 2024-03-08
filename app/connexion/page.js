@@ -28,7 +28,7 @@ export default function Page() {
                     {Connexion === true ? 
                     <>
                     <h1>Connecter</h1>
-                        <button className="cursor-pointer" onClick={() => dispatch(toggleConnexion(false))}>Disconnect</button>
+                        <button className="cursor-pointer border border-white text-white bg-neutral-800 hover:bg-neutral-600 rounded-sm p-1 " onClick={() => dispatch(toggleConnexion(false))}>Deconnexion</button>
                     </>
                     : (
                         <>

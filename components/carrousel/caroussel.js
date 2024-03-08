@@ -48,8 +48,8 @@ export default function Caroussel() {
                             </CarouselItem>
                         ))}
                     </CarouselContent>
-                    <CarouselPrevious className=" max-[770px]:hidden" />
-                    <CarouselNext className=" max-[770px]:hidden " />
+                    <CarouselPrevious className=" max-[770px]:hidden dark:text-white dark:border-white" />
+                    <CarouselNext className=" max-[770px]:hidden dark:text-white dark:border-white  " />
                 </Carousel>}
         </div>
     )

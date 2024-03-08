@@ -11,11 +11,11 @@ export default function PageAcceuil() {
     <div className="flex flex-col ">
       <div className="w-full flex flex-col justify-center items-center bg-gradient-to-b from-zinc-900 to-zinc-800  ">
         <div className="w-full px-10 max-[770px]:px-0 max-[770px]:flex max-[770px]:justify-center ">
-          <h1 className="text-white text-xl w-1/5 py-4 border-2 border-t-0 rounded-br-lg rounded-bl-lg flex justify-center max-[600px]:w-full  max-[770px]:w-3/5 max-[1024px]:w-1/3  ">Pokémon à l'affiche</h1>
+          <h1 className="text-white text-xl w-1/5 py-4 border-2 border-t-0 rounded-br-lg rounded-bl-lg flex justify-center max-[600px]:w-full  max-[770px]:w-3/5 max-[1024px]:w-1/3 dark:border-white  ">Pokémon à l'affiche</h1>
         </div>
         <Caroussel />
       </div>
-      <div className="w-full flex flex-wrap justify-around">
+      <div className=" dark:bg-white w-full flex flex-wrap justify-around">
         <div className="w-[420px] flex justify-center  ">
           <Image className=" bg-white " src={pika} alt="title"></Image>
         </div>

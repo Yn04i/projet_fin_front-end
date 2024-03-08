@@ -17,18 +17,22 @@ export default function Page() {
     }, [])
     console.log(type);
     return (
-        <div>
-            <div></div>
+        <div className="flex flex-col justify-center items-center">
             <div>
-                <input type="text" placeholder="recherche" onChange={e => dispatch(filter(e.target.value))} />
+                <h1 className="text-3xl font-bold dark:text-white">Pokedex</h1>
             </div>
-            <div>
-                <select onChange={e => dispatch(typePokemon(e.target.value))}>
-                    <option value="all" >All</option>
-                    {dataType?.map((item, index) => (
-                        <option key={index} value={item}>{item}</option>
-                    ))}
-                </select>
+            <div className="flex justify-center items-center">
+                <div className="p-7">
+                    <input className="p-1 dark:border-white rounded-sm border-2 border-neutral-700 dark:placeholder:text-white bg-neutral-300 outline-none" type="text" placeholder="recherche" onChange={e => dispatch(filter(e.target.value))} />
+                </div>
+                <div className="p-7">
+                    <select className="p-1 rounded-sm dark:border-white border-2 border-neutral-700 bg-neutral-300 outline-none" onChange={e => dispatch(typePokemon(e.target.value))}>
+                        <option value="all" >All</option>
+                        {dataType?.map((item, index) => (
+                            <option key={index} value={item}>{item}</option>
+                        ))}
+                    </select>
+                </div>
             </div>
             <div className="w-full h-full flex flex-col justify-center items-center">
                 <div className="flex items-start justify-center overflow-y-scroll">

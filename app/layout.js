@@ -5,6 +5,7 @@ import { Provider } from "react-redux";
 import { store } from "@/lib/store";
 const inter = Inter({ subsets: ["latin"] });
 import { useRef } from "react"
+import { useAppSelector } from "@/lib/hooks";
 
 
 export const Metadata = {
@@ -13,6 +14,7 @@ export const Metadata = {
 };
 
 export default function RootLayout({ children }) {
+  // const darkMode = useAppSelector((state) => state.dark.dark);
   const storeRef = useRef()
   if (!storeRef.current) {
     storeRef.current = store
@@ -21,7 +23,7 @@ export default function RootLayout({ children }) {
     <Provider store={storeRef.current}>
       <html lang="en">
         <body className={inter.className}>
-            {children}
+          {children}
         </body>
       </html>
     </Provider>
