@@ -1,16 +1,16 @@
 export default function Footer() {
     return (
         <div className="w-full h-1/6 flex justify-center items-end bg-zinc-950">
-            <head>
+            <div>
                 <title>Footer</title>
-            </head>
-            <main>
+            </div>
+            <div>
                 <p className="text-white">Contact</p>
                 <p className="text-white">Mentions légales</p>
-            </main>
-            <footer>
+            </div>
+            <div>
                 <p className="text-white">© 2023 - Tous droits réservés</p>
-            </footer>
+            </div>
         </div>
     )
 }

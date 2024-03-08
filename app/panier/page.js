@@ -7,8 +7,8 @@ export default function Page() {
     console.log(panier);
     return (
         <div>
-            <h1>Panier</h1>
-            <div>
+            <h1>Favoris</h1>
+            <div className="flex flex-col">
                 {panier.map((item,index)=> 
                 
                     <div key={index}>

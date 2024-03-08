@@ -39,7 +39,7 @@ export default function Caroussel() {
                                             <img
                                                 src={item?.image}
                                                 alt={item?.name}
-                                                className="h-60 w-60 "
+                                                className="w-64"
                                             />
                                         </div>
                                         <h1 className="text-white text-[300px]">{item?.pokedexId}</h1>
@@ -48,8 +48,8 @@ export default function Caroussel() {
                             </CarouselItem>
                         ))}
                     </CarouselContent>
-                    <CarouselPrevious className="" />
-                    <CarouselNext className="" />
+                    <CarouselPrevious className=" max-[770px]:hidden" />
+                    <CarouselNext className=" max-[770px]:hidden " />
                 </Carousel>}
         </div>
     )
